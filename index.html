@@ -2,33 +2,105 @@
 <html>
   <head>
     <title>Др Тамер</title>
+    <style>
+      #foto, #vidos, #pozdrava, #end {
+        display: none;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+    </style>
   </head>
-  <body bgcolor = silver text = gold>
-    <img id="aizenvozduh" src=Айзенвоздушный.jpg>
-    <img id="aizendobry" src=Айзендобрый.jpg>
-    <img id="aizenzloi" src=Айзензлой.jpg>
-    <img id="aizenogon" src=Айзеногненный.jpg>
-    <img id="zoro" src=Зоро.jpg>
-    <img id="igrisserdechko" src=Игриссердечко.jpg>
-    <img id="igristron" src=Игристрон.jpg>
-    <img id="mihouk" src=Михоук.jpg>
-    <img id="shanks" src=Шанкс.jpg>
-    <img id="shinsuivozduh" src=Шинсуивоздух.jpg>
-    <img id="shinsuimilyu" src=Шинсуимилый.jpg>
-    <img id="shinsuiserdechko" src=Шинсуисердечко.jpg>
-    <img id="shisuikrasnyu" src=Шисуикрасный.jpg>
-    <img id="shisuimilyu" src=Шисуимилый.jpg>
-    <img id="shisuirozovuy" src=Шисуирозовый.jpg>
+  <body bgcolor = pink text = gold>
+    <img id="foto" src="Айзенвоздушный.jpg" width="300">
+    <video id="vidos" src="Тамерайбляд.MOV" width="300"></video>
+      <p id="pozdrava">С днюхой, черный колобок! 
+        Аниме и бс — твой максимум, жим лежа — мечты. 
+        Я тебе сайт сделал, чтобы ты хоть в коде шарпал, а не в блич тупил.
+        Толстый, но не мужик — 100 не жмешь.
+        Так что учись, пока я тебя не отформатировал.
+        С праздником, ленивая жопа!</p>
+      <p id="end">Ну вот и все конец кто смотрел тот толстый и черный</p>
     <p id="predislov">От прогера друну поздравление</p>
+      <p>С толстым рождением тебя Негрлан</p>
+      <p>Как говориться чтобы жир стоял и бабы были</p>
+      <p>Чтобы наконец-то 100 пожал и стал мужчиной как Я</p>
     <button id="startButton">Нажми</button>
     <script>
       document.getElementById("startButton").onclick = function () {
         document.getElementById("predislov").style.display = "none";
          document.getElementById("startButton").style.display = "none";
+          document.getElementById("foto").style.display = "block";
+          document.getElementById("vidos").style.display = "block";
+          document.getElementById("pozdrava").style.display = "block";
+         let photos = [
+        "Айзендобрый.jpg",
+        "Айзензлой.jpg",
+        "Айзеногненный.jpg",
+        "Зоро.jpg",
+        "Игриссердечко.jpg",
+        "Игристрон.jpg",
+        "Михоук.jpg",
+        "Шанкс.jpg",
+        "Шинсуивоздух.jpg",
+        "Шинсуимилый.jpg",
+        "Шинсуисердечко.jpg",
+        "Шисуикрасный.jpg",
+        "Шисуимилый.jpg",
+        "Шисуирозовый.jpg",
+        "Тамерафромароз.jpg",
+        "Тамераванна.jpg",
+        "Тамервеник.jpg",
+        "Тамервода.jpg",
+        "Тамервозраст.jpg",
+        "Тамервышка.jpg",
+        "Тамердрака.jpg",
+        "Тамеркемпинг.jpg",
+        "Тамеркрасавчик.jpg",
+        "Тамеркраска.jpg",
+        "Тамерлетник.jpg",
+        "Тамерлицо.jpg",
+        "Тамермашина.jpg",
+        "Тамермахито.jpg",
+        "Тамеряч.jpg",
+        "Тамерносок.jpg",
+        "Тамеродин.jpg",
+        "Тамерочкибильз.jpg",
+        "Тамерочкиадаль.jpg",
+        "Тамерпальто.jpg",
+        "Тамерпес.jpg",
+        "Тамерпляж.jpg",
+        "Тамерподарки.jpg",
+        "Тамерпожар.jpg",
+        "Тамерприцеп.jpg",
+        "Тамерсамолет.jpg",
+        "Тамертрава.jpg",
+        "Тамертрусы.jpg",
+        "Тамеругарлента.jpg",
+        "тамератест.jpg",
+        "тамерлента.jpg"
+
+    ];
+
+    let index = 0;
+
+    let timer = setInterval(function () {
+
+        document.getElementById("foto").src = photos[index];
+
+        index++;
+
+        if (index >= photos.length) {
+
+            clearInterval(timer);
+
+            document.getElementById("end").style.display = "block";
+        }
+    }, 3000);
 }
   </script>
-    <p>С толстым рождением тебя Негрлан</p>
-    <p>Как говориться чтобы жир стоял и бабы были</p>
-    <p>Чтобы наконец-то 100 пожал и стал мужчиной как Я</p>
   </body>
 </html>
